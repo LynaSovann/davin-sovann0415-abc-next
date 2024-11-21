@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: davin-sovann0415-abc-next-certificate
+  namespace: davin-sovann0415-abc-next
+spec:
+  secretName: davin-sovann0415-abc-next-secret-tls
+  commonName: davin-sovann0415-abc-next.assessify.org
+  dnsNames:
+  - davin-sovann0415-abc-next.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
