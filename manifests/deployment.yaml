@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: davin-sovann0415-abc-next-deployment
+  labels:
+    app: davin-sovann0415-abc-next
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: davin-sovann0415-abc-next
+  template:
+    metadata:
+      labels:
+        app: davin-sovann0415-abc-next
+    spec:
+      containers:
+        - name: davin-sovann0415-abc-next-container
+          image: pipejet/davin-sovann0415-abc-next:0
+          ports:
+            - containerPort: 3000
